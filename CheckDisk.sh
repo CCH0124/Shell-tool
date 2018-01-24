@@ -1,11 +1,8 @@
 #!/bin/bash
-# MAX 定義 Disk 容量做多為多少
-MAX=95
+MAX=95 # 定義最大硬碟使用
 EMAIL=s14113242@stu.edu.tw
 
-read -p "輸入要檢查的Disk : " PART
-
-test -z $(df | awk 'NF=1 && NR>1 {print $1}' | grep "$PART")  && echo "Can not find this hard disk" && exit 0
+PART=sda1
 
 USE=$(df -h |grep "$PART" | awk '{ print $5 }' | cut -d'%' -f1)
 
