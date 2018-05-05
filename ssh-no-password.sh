@@ -1,8 +1,3 @@
-## Description
-用 `ssh-keygen` 建立免密碼登入。
-
-## Code
-```bash
 #!/bin/bash
 Usage() {
         echo "Usage: $(basename $0) [options]"
@@ -47,4 +42,3 @@ else
         Usage
         exit 0
 fi
-```
